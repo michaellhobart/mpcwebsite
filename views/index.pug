@@ -2,7 +2,21 @@ doctype html
 html(lang="en")
   head
     title MONUMENT PRINT CO
-    link(rel='stylesheet', href='stylesheets/style.css')
-  body
+    // Bootstrap
+    link(rel='stylesheet', href='vendor/bootstrap/css/bootstrap.min.css')
+      
+    // Fonts
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Montserrat:400,700')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Kaushan+Script')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700')
+      
+    // THEME CSS
+    link(rel='stylesheet', href='css/agency.css')
+      
+  body(id="page-top" class="index")
+    include compartments/nav.pug
     include compartments/header.pug
-    h1 Body
+    include compartments/services.pug
+    include compartments/portfolio.pug
+    include compartments/about.pug
