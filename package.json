@@ -1,0 +1,23 @@
+{
+  "name": "mpcwebsite",
+  "version": "1.0.0",
+  "description": "MPC Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaellhobart/mpcwebsite.git"
+  },
+  "author": "MLH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaellhobart/mpcwebsite/issues"
+  },
+  "homepage": "https://github.com/michaellhobart/mpcwebsite#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  }
+}
