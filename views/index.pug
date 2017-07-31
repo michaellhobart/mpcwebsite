@@ -1,13 +1,19 @@
 doctype html
 html(lang="en")
   head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="")
+    meta(name="author" content="")
     title MONUMENT PRINT CO
     // Bootstrap
     link(rel='stylesheet', href='vendor/bootstrap/css/bootstrap.min.css')
       
     // Fonts
+    link(href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
     link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Montserrat:400,700')
-    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Kaushan+Script')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Roboto:100')
     link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic')
     link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700')
       
@@ -17,6 +23,10 @@ html(lang="en")
   body(id="page-top" class="index")
     include compartments/nav.pug
     include compartments/header.pug
-    include compartments/services.pug
+    include compartments/clients.pug
     include compartments/portfolio.pug
+    include compartments/services.pug
     include compartments/about.pug
+    include compartments/contact.pug
+    include compartments/footer.pug
+    include compartments/scripts.pug
