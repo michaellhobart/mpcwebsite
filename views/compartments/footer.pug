@@ -1,0 +1,15 @@
+mixin socialMediaLink(linkURL, socialClasses)
+  li
+    a(href=linkURL)
+      i(class=socialClasses)
+  
+footer
+  .container
+    .row
+      .col-md-4
+        span.copyright Copyright (c) Monument Print Co. 2017
+      .col-md-4
+        ul(class="list-inline social-buttons")
+          +socialMediaLink("#", "fa fa-twitter")
+          +socialMediaLink("#", "fa fa-facebook")
+          +socialMediaLink("#", "fa fa-linkedin")

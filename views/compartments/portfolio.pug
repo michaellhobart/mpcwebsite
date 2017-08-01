@@ -1,0 +1,24 @@
+mixin pitems(imgLink, portTitle, portType)
+  div(class="col-md-4 col-sm-6 portfolio-item")
+    a(href="#portfolioModal1" class="portfolio-link" data-toggle="modal")
+      .portfolio-hover
+        .portfolio-hover-content
+          i(class="fa fa-plus fa-3x")
+      img(src= imgLink class="img-responsive" alt="")
+    .portfolio-caption
+      h4= portTitle
+      p.text-muted= portType
+          
+section(id="portfolio" class="bg-light-gray")
+  .container
+    .row
+      div(class="col-lg-12 text-center")
+        h2.section-heading OUR WORK
+        h3(class="section-subheading text-muted") Check out some of what we have made recently.
+    .row
+      +pitems("img/portfolio/roundicons.png", 'Item 1', 'Type 1')
+      +pitems("img/portfolio/roundicons.png", 'Item 2', 'Type 2')
+      +pitems("img/portfolio/roundicons.png", 'Item 3', 'Type 3')
+      +pitems("img/portfolio/roundicons.png", 'Item 4', 'Type 4')
+      +pitems("img/portfolio/roundicons.png", 'Item 5', 'Type 5')
+      +pitems("img/portfolio/roundicons.png", 'Item 6', 'Type 6') 

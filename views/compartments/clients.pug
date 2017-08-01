@@ -1,0 +1,12 @@
+mixin clientIcon(cliLink, cliImage)
+  div(class="col-md-3 col-sm-6")
+    a(href=cliLink)
+      img(src=cliImage class="img-responsive img-centered" alt="")
+
+aside.clients
+  .container
+    .row
+      +clientIcon("#", "img/logos/level-up.png")
+      +clientIcon("#", "img/logos/designmodo.jpg")
+      +clientIcon("#", "img/logos/themeforest.jpg")
+      +clientIcon("#", "img/logos/creative-market.jpg")
