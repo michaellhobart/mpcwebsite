@@ -1,8 +1,14 @@
 document.addEventListener( 'DOMContentLoaded', () => {
   const testDiv = document.querySelector( '.test-div' )
-  testDiv.innerHTML = window.innerWidth + " " + screen.width;
-  window.addEventListener("resize", () => {
-    testDiv.innerHTML = window.innerWidth + " " + screen.width
-  });
-  // testDiv.innerHTML = window.innerWidth + " " + screen.width;
+  const navTitle = document.querySelector( '.navbar-brand' )
+
+  //FUNCTIONS DEFINITIONS
+  const adjNavTitleText = () => {window.innerWidth > 1000 ? navTitle.innerHTML = "Monument Print Company" : navTitle.innerHTML = "MONUMENT"}
+
+  //CALLING FUNCTIONS
+  adjNavTitleText()
+
+  window.addEventListener('resize', (windowWidth) => {
+    adjNavTitleText()
+  })
 })

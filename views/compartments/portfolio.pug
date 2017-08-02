@@ -1,6 +1,6 @@
-mixin pitems(imgLink, portTitle, portType)
+mixin pitems(modalRef, imgLink, portTitle, portType)
   div(class="col-md-4 col-sm-6 portfolio-item")
-    a(href="#portfolioModal1" class="portfolio-link" data-toggle="modal")
+    a(href=modalRef class="portfolio-link" data-toggle="modal")
       .portfolio-hover
         .portfolio-hover-content
           i(class="fa fa-plus fa-3x")
@@ -16,9 +16,9 @@ section(id="portfolio" class="bg-light-gray")
         h2.section-heading OUR WORK
         h3(class="section-subheading text-muted") Check out some of what we have made recently.
     .row
-      +pitems("img/portfolio/roundicons.png", 'Item 1', 'Type 1')
-      +pitems("img/portfolio/roundicons.png", 'Item 2', 'Type 2')
-      +pitems("img/portfolio/roundicons.png", 'Item 3', 'Type 3')
-      +pitems("img/portfolio/roundicons.png", 'Item 4', 'Type 4')
-      +pitems("img/portfolio/roundicons.png", 'Item 5', 'Type 5')
-      +pitems("img/portfolio/roundicons.png", 'Item 6', 'Type 6') 
+      +pitems("#portfolioModal1", "img/portfolio/roundicons.png", 'Item 1', 'Type 1')
+      +pitems("#portfolioModal2", "img/portfolio/roundicons.png", 'Item 2', 'Type 2')
+      +pitems("#portfolioModal3", "img/portfolio/roundicons.png", 'Item 3', 'Type 3')
+      +pitems("#portfolioModal4", "img/portfolio/roundicons.png", 'Item 4', 'Type 4')
+      +pitems("#portfolioModal5", "img/portfolio/roundicons.png", 'Item 5', 'Type 5')
+      +pitems("#portfolioModal6", "img/portfolio/roundicons.png", 'Item 6', 'Type 6') 

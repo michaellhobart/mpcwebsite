@@ -1,0 +1,25 @@
+mixin portfolioModal(modalId, projectName, introDesc, imgFull, fullDesc)
+  div(class="portfolio-modal modal fade" id=modalId tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog
+      .modal-content
+        div(class="close-modal" data-dismiss="modal")
+          .lr
+            .rl
+        .container
+          .row
+            div(class="col-lg-8 col-lg-offset-2")
+              .modal-body
+                h2= projectName
+                p(class="item-intro text-muted")= introDesc
+                img(class="img-responsive img-centered" src=imgFull alt="")
+                p= fullDesc
+                button(ype="button" class="btn btn-primary" data-dismiss="modal")
+                  i(class="fa fa-times")
+                  |  Close Project
+                
++portfolioModal("portfolioModal1", "Project Name 1", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
++portfolioModal("portfolioModal2", "Project Name 2", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
++portfolioModal("portfolioModal3", "Project Name 3", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
++portfolioModal("portfolioModal4", "Project Name 4", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
++portfolioModal("portfolioModal5", "Project Name 5", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
++portfolioModal("portfolioModal6", "Project Name 6", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
