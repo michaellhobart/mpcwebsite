@@ -15,7 +15,7 @@ mixin portfolioModal(modalId, projectName, introDesc, imgFull, fullDesc)
                 p= fullDesc
                 button(ype="button" class="btn btn-primary" data-dismiss="modal")
                   i(class="fa fa-times")
-                  |  Close Project
+                  |  Close Project          
                 
 +portfolioModal("portfolioModal1", "Project Name 1", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
 +portfolioModal("portfolioModal2", "Project Name 2", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
@@ -23,4 +23,54 @@ mixin portfolioModal(modalId, projectName, introDesc, imgFull, fullDesc)
 +portfolioModal("portfolioModal4", "Project Name 4", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
 +portfolioModal("portfolioModal5", "Project Name 5", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
 +portfolioModal("portfolioModal6", "Project Name 6", "Intro Description", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
-+portfolioModal("portfolioModal7", "Quote Form Test", "Testing", "img/portfolio/roundicons-free.png", "Full Descripton blah blah blah")
+
+//- Quote Form Modal
+
+mixin quoteInput(iType, iPlaceholder, iId, iValidate)
+  .form-group
+    input(type=iType class="form-control quote-count" placeholder=iPlaceholder id=iId required data-validation-required-message=iValidate)
+    p(class="help-block text-danger")
+
+
+div(class="portfolio-modal modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      div(class="close-modal" data-dismiss="modal")
+        .lr
+          .rl
+      .container
+        .row
+          div(class="col-lg-8 col-lg-offset-2")
+            .modal-body
+              h2(class="quote-title")= "Get a quick price quote"
+              p(class="item-intro text-muted")= "Give us a little bit of information."
+              form(class="quoteform")
+                +quoteInput("text", "Count", "count", "Please Enter A Quantity.")
+                p= "Front Colors"
+                select(name= "frontColors" class="front-colors")
+                  option(value=1)= 1
+                  option(value=2)= 2
+                  option(value=3)= 3
+                  option(value=4)= 4
+                  option(value=5)= 5
+                  option(value=6)= 6
+                  option(value=7)= 7
+                  option(value=8)= 8
+                p= ""
+                p= "Back Colors"
+                select(name= "backColors" class="back-colors")
+                  option(value=0)= 0
+                  option(value=1)= 1
+                  option(value=2)= 2
+                  option(value=3)= 3
+                  option(value=4)= 4
+                  option(value=5)= 5
+                  option(value=6)= 6
+                  option(value=7)= 7
+                  option(value=8)= 8
+              p= ""
+              p= "Total:"
+              .quote-total= "$0.00"
+              button(ype="button" class="btn btn-primary" data-dismiss="modal")
+                i(class="fa fa-times")
+                |  Close Project
