@@ -45,7 +45,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     qI.addEventListener('change', () => {
       let total = quoteCalc()
       const tQ = (parseInt(quoteText.value) * total).toFixed(2)
-      quoteText.value < 1 ? quoteTotal.innerHTML = "$0.00" : quoteTotal.innerHTML = `$${total} per and $${tQ} total`
+      quoteText.value < 12 ? quoteTotal.innerHTML = "$0.00" : quoteTotal.innerHTML = `$${total} per and $${tQ} total`
 
     })
   })
