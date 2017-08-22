@@ -44,7 +44,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     qI.addEventListener('change', () => {
       let total = quoteCalc()
       const tQ = (parseInt(quoteText.value) * total).toFixed(2)
-      quoteText.value < 12 ? quoteTotal.innerHTML = "Minimum quantity is 12 pieces" : quoteTotal.innerHTML = `$${total} per and $${tQ} total`
+      quoteText.value < 12 ? quoteTotal.innerHTML = "Minimum quantity is 12 pieces" : quoteTotal.innerHTML = `$${total} per shirt / $${tQ} total`
 
     })
   })
@@ -64,7 +64,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     q >= 48 ? inks = 5 : inks
     q >= 60 ? inks = 8: inks
 
-    for (var x = 1; x <= inks; x++){
+    for (var x = 0; x <= inks; x++){
       if (fSelected === x) {
         frontColors.innerHTML += `<option value="${x}" selected>${x}</option>`
       } else {

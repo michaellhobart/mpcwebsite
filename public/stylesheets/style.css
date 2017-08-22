@@ -1,3 +1,55 @@
-h1 {
-  color: red;
+.color-qty-input {
+
 }
+
+.color-qty-type {
+  font-size: 1.5em;
+}
+
+.quote-total {
+  font-size: 3em;
+}
+
+#quote-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  font-size: 2em;
+}
+
+.quoteform {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input.test-input,
+input.quote-count{
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  color: #34495e;
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+
+input:focus {
+  border-bottom: solid 2px #969696;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #ecf0f1;
+  opacity: .8
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
