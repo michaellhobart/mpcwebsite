@@ -28,7 +28,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     const b = parseInt(document.querySelector( '.back-colors' ).value)
     // c === 0 ? return 0 : c
     let baseCost, costPer = 0, setupPer = 0
-    c > 12 ? baseCost = 5.00 : baseCost
+    c >= 12 ? baseCost = 5.00 : baseCost
     c >= 24 ? baseCost = 3.40 : baseCost
     c >= 60 ? baseCost = 2.75 : baseCost
     c >= 120 ? baseCost = 2.40 : baseCost
