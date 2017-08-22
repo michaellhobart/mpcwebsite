@@ -45,7 +45,7 @@ div(class="portfolio-modal modal fade" id="quoteModal" tabindex="-1" role="dialo
               h2(class="quote-title")= "Get a quick price quote"
               p(class="item-intro text-muted")= "Give us a little bit of information."
               form(class="quoteform")
-                +quoteInput("text", "Count", "count", "Please Enter A Quantity.")
+                +quoteInput("number", "Count", "count", "Please Enter A Quantity.")
                 p= "Front Colors"
                 select(name= "frontColors" class="front-colors")
                   option(value=1)= 1
@@ -73,4 +73,4 @@ div(class="portfolio-modal modal fade" id="quoteModal" tabindex="-1" role="dialo
               .quote-total= "$0.00"
               button(ype="button" class="btn btn-primary" data-dismiss="modal")
                 i(class="fa fa-times")
-                |  Close Project
+                |  Close Form

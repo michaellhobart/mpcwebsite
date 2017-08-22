@@ -740,6 +740,12 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+#count {
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 ::-moz-selection {
   text-shadow: none;
   background: #3498db;
