@@ -1,6 +1,14 @@
+- var count12 = 1
+- var count24 = 3
+- var count48 = 5
+- var count60 = 8
 section(id="test")
   .container
     .row
       div(class="col-lg-12 text-center")
         h2(class="section-heading") Test
-        a(href="#portfolioModal7" class="page-scroll btn btn-xl" data-toggle="modal") Modal Test
+        form
+          select(name= "testColors" class="test-colors")
+            option(value=0)= 0
+          button(class="test-button" type="button") Press
+          

@@ -26,8 +26,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     const c = parseInt(document.querySelector( '.quote-count' ).value)
     const f = parseInt(document.querySelector( '.front-colors' ).value)
     const b = parseInt(document.querySelector( '.back-colors' ).value)
-    // c === 0 ? return 0 : c
-    let baseCost, costPer = 0, setupPer = 0
+    let baseCost = 0, costPer = 0, setupPer = 0
     c >= 12 ? baseCost = 5.00 : baseCost
     c >= 24 ? baseCost = 3.40 : baseCost
     c >= 60 ? baseCost = 2.75 : baseCost
@@ -45,9 +44,48 @@ document.addEventListener( 'DOMContentLoaded', () => {
     qI.addEventListener('change', () => {
       let total = quoteCalc()
       const tQ = (parseInt(quoteText.value) * total).toFixed(2)
-      quoteText.value < 12 ? quoteTotal.innerHTML = "$0.00" : quoteTotal.innerHTML = `$${total} per and $${tQ} total`
+      quoteText.value < 12 ? quoteTotal.innerHTML = "Minimum quantity is 12 pieces" : quoteTotal.innerHTML = `$${total} per and $${tQ} total`
 
     })
+  })
+
+
+  // ****** CHANGES DROPDOWNS BASED ON QTY ******
+
+  function changeInkColors(q) {
+    let inks = 0
+    let fSelected = parseInt(document.querySelector( '.front-colors' ).value)
+    let bSelected = parseInt(document.querySelector( '.back-colors' ).value)
+    console.log(`fSelected = ${fSelected}`);
+    frontColors.innerHTML = ""
+    backColors.innerHTML = ""
+    q < 24 ? inks = 1 : inks
+    q >= 24 ? inks = 3 : inks
+    q >= 48 ? inks = 5 : inks
+    q >= 60 ? inks = 8: inks
+
+    for (var x = 1; x <= inks; x++){
+      if (fSelected === x) {
+        frontColors.innerHTML += `<option value="${x}" selected>${x}</option>`
+      } else {
+      frontColors.innerHTML += `<option value="${x}">${x}</option>`
+      }
+    }
+
+    for (var x = 0; x <= inks; x++){
+      if (bSelected === x) {
+        backColors.innerHTML += `<option value="${x}" selected>${x}</option>`
+      } else {
+      backColors.innerHTML += `<option value="${x}">${x}</option>`
+      }
+    }
+  }
+
+  console.log("");
+
+  quoteText.addEventListener('change', () => {
+    let q = parseInt(quoteText.value)
+    changeInkColors(q)
   })
 
 })
