@@ -35,6 +35,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     setupPer = ((f + b)*20)/c
     costPer = (Math.ceil((1.98 + baseCost + ((f*.25)-.25) + setupPer)*20)/20)
     b ? costPer += (1 + ((b-1)*.25)) : b
+    !f ? costPer -= 0.75 : costPer
     return costPer.toFixed(2)
   }
 
@@ -45,6 +46,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
       let total = quoteCalc()
       const tQ = (parseInt(quoteText.value) * total).toFixed(2)
       quoteText.value < 12 ? quoteTotal.innerHTML = "Minimum quantity is 12 pieces" : quoteTotal.innerHTML = `$${total} per shirt / $${tQ} total`
+
 
     })
   })
@@ -66,17 +68,17 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
     for (var x = 0; x <= inks; x++){
       if (fSelected === x) {
-        frontColors.innerHTML += `<option value="${x}" selected>${x}</option>`
+        frontColors.innerHTML += `<option value="${x}" selected>${x} COLOR</option>`
       } else {
-      frontColors.innerHTML += `<option value="${x}">${x}</option>`
+      frontColors.innerHTML += `<option value="${x}">${x} COLOR</option>`
       }
     }
 
     for (var x = 0; x <= inks; x++){
       if (bSelected === x) {
-        backColors.innerHTML += `<option value="${x}" selected>${x}</option>`
+        backColors.innerHTML += `<option value="${x}" selected>${x} COLOR</option>`
       } else {
-      backColors.innerHTML += `<option value="${x}">${x}</option>`
+      backColors.innerHTML += `<option value="${x}">${x} COLOR</option>`
       }
     }
   }

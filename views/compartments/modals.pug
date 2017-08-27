@@ -41,15 +41,15 @@ div(class="portfolio-modal modal fade" id="quoteModal" tabindex="-1" role="dialo
               div(id="quote-input-row")
                 form(class="quoteform")
                   input(type="number" class="quote-count" placeholder="QTY" id="count" required data-validation-required-message="Please Enter A Quantity.")
-                  p(class="help-block text-danger")
                   .color-qty-input
-                    p(class="color-qty-type")= "Front Colors"
-                    select(name= "frontColors" class="front-colors")
-                      option(value=1)= 1
+                    p(class="color-qty-type")= "Front Print"
+                    span(custom-dropdown big)
+                      select(name= "frontColors" class="front-colors")
+                        option(value=1)= "1 COLOR"
                   .color-qty-input
-                    p(class="color-qty-type")= "Back Colors"
+                    p(class="color-qty-type")= "Back Print"
                     select(name= "backColors" class="back-colors")
-                      option(value=0)= 0
+                      option(value=0)= "0 COLOR"
                 //- p(class="color-qty-type")= "Total:"
                 .quote-total= ""
               //- button(type="button" class="btn btn-primary" data-dismiss="modal")
