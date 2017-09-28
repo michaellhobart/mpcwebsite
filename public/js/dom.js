@@ -6,6 +6,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
   const backColors  = document.querySelector( '.back-colors' )
   const quoteTotal = document.querySelector( '.quote-total' )
   const quoteInputs = [quoteText, frontColors, backColors]
+  // const sendButton = document.getElementById( 'send' )
+  const sendButton = document.getElementById( 'contactSend' )
 
 
   // ******* NAV BRAND TEXT RESIZE *******
@@ -83,11 +85,45 @@ document.addEventListener( 'DOMContentLoaded', () => {
     }
   }
 
-  console.log("");
-
   quoteText.addEventListener('change', () => {
     let q = parseInt(quoteText.value)
     changeInkColors(q)
   })
 
+  // ********* TEST CONTACT FORM *********
+  // let fullURL = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port : '')
+  // sendButton.addEventListener('click', () => {
+  //   const formData = $("#test-mailer").serialize() // creates JSON object for #test-mailer form and stores it in formData
+  //   $.ajax({
+  //     url: `${fullURL}/send`,
+  //     type: 'POST',
+  //     data: formData,
+  //     success: (result) => {console.log(result)},
+  //     error: (e) => {console.log(e)},
+  //     dataType: "html",
+  //     timeout: 60000
+  //   })
+
+    // ********* CONTACT FORM CONTROLLER *********
+    let fullURL = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port : '')
+    sendButton.addEventListener('click', () => {
+      const formData = $("#contactForm").serialize() // creates JSON object for #test-mailer form and stores it in formData
+      $.ajax({
+        url: `${fullURL}/send`,
+        type: 'POST',
+        data: formData,
+        success: (result) => {console.log(result)},
+        error: (e) => {console.log(e)},
+        dataType: "html",
+        timeout: 60000
+      })
+
+
+
+
+  });
+
+
+
 })
+// END OF APP

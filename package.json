@@ -4,7 +4,8 @@
   "description": "MPC Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/michaellhobart/mpcwebsite#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.1.4",
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "nodemailer": "^4.0.1",
     "pug": "^2.0.0-rc.2"

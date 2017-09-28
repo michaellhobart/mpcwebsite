@@ -1,6 +1,6 @@
-mixin contactInput(iType, iPlaceholder, iId, iValidate)
+mixin contactInput(iType, iPlaceholder, iId, iValidate, iName)
   .form-group
-    input(type=iType class="form-control" placeholder=iPlaceholder id=iId required data-validation-required-message=iValidate)
+    input(type=iType class="form-control" placeholder=iPlaceholder id=iId required data-validation-required-message=iValidate name=iName)
     p(class="help-block text-danger")
     
 section#contact
@@ -15,14 +15,14 @@ section#contact
         form(name="sentMessage" id="contactForm" novalidate)
           .row
             .col-md-6
-              +contactInput("text", "Your Name *", "name", "Please Enter Your Name.")
-              +contactInput("email", "Your Email *", "email", "Please Enter Your Email.")
-              +contactInput("tel", "Your Phone Number *", "phone", "Please Enter Your Phone Number.")
+              +contactInput("text", "Your Name *", "name", "Please Enter Your Name.", "name")
+              +contactInput("email", "Your Email *", "email", "Please Enter Your Email.", "email")
+              +contactInput("tel", "Your Phone Number *", "phone", "Please Enter Your Phone Number.", "telephone")
             .col-md-6
               .form-group
-                textarea(class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message.")
+                textarea(class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message." name="message")
                 p(class="help-block text-danger")
             .clearfix
             div(class="col-lg-12 text-center")
               #sucesss
-              button(type="submit" class="btn btn-xl") Send Message
+              button(type="submit" class="btn btn-xl" id="contactSend") Send Message

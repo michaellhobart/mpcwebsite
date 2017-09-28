@@ -1,6 +1,7 @@
-- var count12 = 1
-- var count24 = 3
-- var count48 = 5
-- var count60 = 8
-section(id="test")
-  input(type="number" id="test" class="test-input" placeholder="QTY")
+form(name="testmailer" id="test-mailer")  
+  .test-mail-div
+    .row
+      input(type="text" id="form-test-input" name="testtext" placeholder="Enter Texst" )
+    .row    
+      button(type="button" class="btn btn-m" id="send") Send Message
+      
